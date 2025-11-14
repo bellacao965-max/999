@@ -1,0 +1,1 @@
+services:\n  - type: static\n    name: mumet-static\n    env: static\n    buildCommand: ""\n    publishPath: "public"\n

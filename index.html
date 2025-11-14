@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Mumet — Sumber Inspirasi</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+  <header class="site-header">
+    <div class="wrap">
+      <img src="assets/logo.png" alt="Mumet" class="logo">
+      <div class="title-group">
+        <h1>Mumet — Sumber Inspirasi</h1>
+        <p class="tag">Musik • Video • Sosial • AI • Motivasi</p>
+      </div>
+      <div class="actions">
+        <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+        <button id="installBtn" style="display:none">Install</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap grid">
+    <section class="card player">
+      <h2>🎵 YouTube Player</h2>
+      <iframe id="ytFrame" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+      <div class="controls">
+        <button id="randBtn">Random Lagu</button>
+        <select id="playlist"></select>
+        <button id="prevBtn">Prev</button>
+        <button id="nextBtn">Next</button>
+      </div>
+      <div class="yt-search">
+        <input id="ytQuery" placeholder="Cari video YouTube..." />
+        <button id="ytSearchBtn">Cari</button>
+        <div id="ytResults" class="results"></div>
+      </div>
+    </section>
+
+    <section class="card social">
+      <h2>📱 Instagram / TikTok Embed</h2>
+      <textarea id="embedInput" placeholder="Paste URL atau embed code..."></textarea>
+      <div><button id="showEmbed">Tampilkan</button></div>
+      <div id="embedOut" class="embedOut"></div>
+    </section>
+
+    <section class="card search-ai">
+      <h2>🔎 Google Mini</h2>
+      <form id="gform" action="https://www.google.com/search" method="GET" target="_blank">
+        <input name="q" placeholder="Cari di Google..." />
+        <button type="submit">Cari</button>
+      </form>
+
+      <h2 style="margin-top:18px">🤖 AI Mini (lokal)</h2>
+      <textarea id="aiInput" placeholder="Tanyakan sesuatu..."></textarea>
+      <div class="ai-actions">
+        <button id="aiBtn">Kirim (Demo)</button>
+        <button id="notifyToggle">Aktifkan Notifikasi</button>
+      </div>
+      <div id="aiOut" class="aiOut"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© 2025 Mumet — Sumber Inspirasi</small>
+    </div>
+  </footer>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
